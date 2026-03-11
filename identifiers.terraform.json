@@ -1,0 +1,15 @@
+{
+	"cloudflare_zone_id": "ENC[AES256_GCM,data:9HCIfZLF5022JJLgDuypRFi0KnC6llX2hWG6okwOW7M=,iv:nhbxJ9xyYb/OjgkXRkPWPCHU0GX6L3juHc51wCQ2Qos=,tag:7g8XWfiQFEvv4bPlMntPKw==,type:str]",
+	"sops": {
+		"age": [
+			{
+				"recipient": "age1vpmza6twjxadxdghtuxgh9u3d9662s5qsfmf6fm6yljhwypusuuq9keuyz",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAvV2NyUkJLSHIyelB6RWU0\nM2RYcDdTWWx1UFNsWTBHN0FhWlZERlZFeVJjCmFpeXZsQmVCMCtGKzlEaFpZOGRB\naFlHQ1BJcjQvemMvb2VvWEM2SVVRa00KLS0tIDNBazA0Y0ZjR2c3blk0QUlWVlhZ\nOWtsL2lRZzVlK3RiSnIrSjBJN2JVNjgKDCVL1AdxOj4E/HEZAl0frlQKa2JRz9+Q\njqF2FqcBaJdrpv2E2D//7lQC/4B0KfjaClqDWikPNf2myU9NfCm83g==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2026-03-11T03:19:27Z",
+		"mac": "ENC[AES256_GCM,data:Y1/MQgTJ7zBqSrXEd3CsAIG1YSEVgbC1PI47zIk9Fovx1FAM/kQ653ZLuyrpTfBRHCHQYBHWH49aU4TdWsmOaIpPsp2Lcmi+LT3+FKyorHjDcsoZ1znGf+mhw0fqV7zkLnUtxoH2W6k8Ip60bw3WikJ/CKxekU3GmLiwNrsFfnc=,iv:gjeCCBzmnsEeOe4BPCPhdT3bJnSq/nqrGO3ST7y4Ivs=,tag:UV+lIqksqvSK6fmd1q8jrQ==,type:str]",
+		"unencrypted_suffix": "_unencrypted",
+		"version": "3.11.0"
+	}
+}
