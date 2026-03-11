@@ -5,11 +5,19 @@ ephemeral "sops_file" "secrets" {
 locals {
   secrets = jsondecode(ephemeral.sops_file.secrets.raw)
 }
+
 provider "cloudflare" {
   api_token = local.secrets.cloudflare_api_token
 }
 
 terraform {
+  backend "s3" {
+    bucket       = "tech1savvy-terraform-state"
+    key          = "cloudflare/terraform.tfstate"
+    region       = "ap-south-1"
+    use_lockfile = true
+  }
+
   required_version = ">= 1.5.7"
   required_providers {
     cloudflare = {
