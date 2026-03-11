@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::461278471397:role/github-terraform-s3
+          aws-region: ap-south-1
       - name: Checkout repository
         uses: actions/checkout@v4
 
