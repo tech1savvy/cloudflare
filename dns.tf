@@ -14,6 +14,19 @@ data "cloudflare_zone" "main" {
 }
 
 # -----------------------------------------------------------------------------
+# World Wide Web (CNAME Record)
+# -----------------------------------------------------------------------------
+
+resource "cloudflare_record" "www" {
+  zone_id = local.identifiers.cloudflare_zone_id
+  name    = "www"
+  content = "tech1savvy.me"
+  type    = "CNAME"
+  ttl     = 1 # Auto TTL when proxied
+  proxied = true
+}
+
+# -----------------------------------------------------------------------------
 # GitHub Pages (CNAME Record)
 # -----------------------------------------------------------------------------
 
