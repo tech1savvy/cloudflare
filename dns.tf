@@ -27,14 +27,30 @@ resource "cloudflare_record" "www" {
 }
 
 # -----------------------------------------------------------------------------
-# GitHub Pages (CNAME Record)
+# GitHub Pages (A Records at apex + CNAME for blog)
 # -----------------------------------------------------------------------------
 
-resource "cloudflare_record" "github" {
+resource "cloudflare_record" "github_blog" {
+  count   = 0 # Set to 1 to enable blog.tech1savvy.me
   zone_id = local.identifiers.cloudflare_zone_id
   name    = "blog"
   content = "tech1savvy.github.io"
   type    = "CNAME"
-  ttl     = 1 # Auto TTL when proxied
+  ttl     = 1
+  proxied = true
+}
+
+resource "cloudflare_record" "github_apex" {
+  for_each = toset([
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+  ])
+  zone_id = local.identifiers.cloudflare_zone_id
+  name    = "@"
+  content = each.value
+  type    = "A"
+  ttl     = 1
   proxied = true
 }

@@ -1,4 +1,3 @@
-
 # =============================================================================
 # Outputs
 # =============================================================================
@@ -10,5 +9,5 @@ output "zone_name" {
 
 output "github_record_hostname" {
   description = "GitHub Pages hostname"
-  value       = cloudflare_record.github.hostname
+  value       = length(cloudflare_record.github_blog) > 0 ? cloudflare_record.github_blog[0].hostname : null
 }
