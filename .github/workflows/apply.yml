@@ -23,7 +23,7 @@ jobs:
           role-to-assume: arn:aws:iam::461278471397:role/github-terraform-s3
           aws-region: ap-south-1
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v4
