@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '**.tf'
+      - "**.tf"
   workflow_dispatch:
 
 permissions:
@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::461278471397:role/github-terraform-s3
           aws-region: ap-south-1
