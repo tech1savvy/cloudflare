@@ -32,7 +32,7 @@ resource "cloudflare_record" "www" {
 
 resource "cloudflare_record" "github" {
   zone_id = local.identifiers.cloudflare_zone_id
-  name    = "github"
+  name    = "blog"
   content = "tech1savvy.github.io"
   type    = "CNAME"
   ttl     = 1 # Auto TTL when proxied
