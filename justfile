@@ -21,6 +21,9 @@ apply:
 destroy:
     terraform destroy
 
+output:
+  terraform output
+
 clean:
     rm -f tfplan
     rm -rf .terraform
