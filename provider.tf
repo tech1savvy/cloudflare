@@ -12,7 +12,7 @@ provider "cloudflare" {
 
 terraform {
   backend "s3" {
-    bucket       = "tech1savvy-terraform-state"
+    bucket       = "tech1savvy-tf-state"
     key          = "cloudflare/terraform.tfstate"
     region       = "ap-south-1"
     use_lockfile = true
