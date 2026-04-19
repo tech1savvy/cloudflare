@@ -2,6 +2,9 @@
 *.tfstate
 *.tfstate.*
 
+# Terraform Plan
+*.tfplan
+
 # Variables with secrets
 *.tfvars
 !*.tfvars.example

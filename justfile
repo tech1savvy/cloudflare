@@ -13,10 +13,10 @@ init:
     terraform init
 
 plan:
-    terraform plan -out=tfplan
+    terraform plan -out=.tfplan
 
 apply:
-    terraform apply tfplan
+    terraform apply .tfplan
 
 destroy:
     terraform destroy
